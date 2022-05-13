@@ -21,6 +21,7 @@ bash run.sh
 ```
 cd training_code
 ```
+put data at training_code/data
 open summary.ipynb and run all
 
 
