@@ -1,3 +1,4 @@
 data/*
 weight/*
 __pycache__
+.DS_Store
