@@ -1,6 +1,6 @@
 import json
 import argparse
-from tw_rouge import get_rouge
+from tw_rouge.tw_rouge import get_rouge
 
 
 def main(args):
