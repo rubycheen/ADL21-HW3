@@ -11,6 +11,18 @@ cd ADL21-HW3
 pip install -e tw_rouge
 ```
 
+## Inference
+```
+bash download.sh
+bash run.sh
+```
+
+## Training
+```
+cd training_code
+```
+open summary.ipynb and run all
+
 
 ## Usage
 ### Use the Script
