@@ -4,11 +4,11 @@ import argparse
 
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, AutoConfig
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 BATCH_SIZE = 32
 max_length = 384
-tokenizer = AutoTokenizer.from_pretrained("google/mt5-small")
+tokenizer = AutoTokenizer.from_pretrained("checkpoint-20000")
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f'Using {device} for inference...')
@@ -57,8 +57,7 @@ if __name__ == "__main__":
 
     ## load model 
     print('Model loading...')
-    config = AutoConfig.from_pretrained("google/mt5-small")
-    model = AutoModelForSeq2SeqLM.from_pretrained('./checkpoint-20000.pt', config=config)
+    model = AutoModelForSeq2SeqLM.from_pretrained('checkpoint-20000')
     model.to(device)
 
     print('Predicting...')
